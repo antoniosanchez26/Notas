@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int notas,numero,aprobados = 0,suspensos = 0, media = 0;
+        int notas,numero,aprobados = 0,suspensos = 0,suma  = 0;
         Scanner entrada = new Scanner(System.in);
 
         System.out.print("¿Cuántas notas quieres introducir? ");
@@ -21,7 +21,7 @@ public class Main {
                 } else {
                     suspensos = suspensos +1;
                 }
-                media = (media + numero) /2;
+                suma = suma + numero;
             } while (numero < 0 || numero > 10);
             System.out.println();
         }
@@ -29,6 +29,6 @@ public class Main {
 
         System.out.println("Número de aprobados: " + aprobados);
         System.out.println("Número de suspensos: " + suspensos);
-        System.out.println("Media de notas: " + media);
+        System.out.println("Media de notas: " + (suma/notas));
     }
 }
